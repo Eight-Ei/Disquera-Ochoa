@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario de Género</title>
+    <!-- Agrega aquí los enlaces a tus archivos CSS -->
+</head>
+<body>
+    <h1>Registrar Nuevo Género</h1>
+    <form th:action="@{/genero/add}" th:object="${genero}" method="post">
+        <label for="idGenero">ID:</label>
+        <input type="text" id="idGenero" th:field="*{idGenero}"/>
+        <br/>
+        <label for="nombreGenero">Nombre:</label>
+        <input type="text" id="nombreGenero" th:field="*{nombreGenero}"/>
+        <br/>
+        <label for="estadoGenero">Estado:</label>
+        <input type="checkbox" id="estadoGenero" th:field="*{estadoGenero}"/>
+        <br/>
+        <button type="submit">Guardar</button>
+    </form>
+    <!-- Agrega aquí cualquier otro contenido que desees -->
+</body>
+</html>

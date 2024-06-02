@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario de Disquera</title>
+    <!-- Agrega aquí los enlaces a tus archivos CSS -->
+</head>
+<body>
+    <h1>Registrar Nueva Disquera</h1>
+    <form th:action="@{/disquera/add}" th:object="${disquera}" method="post">
+        <label for="idDisquera">ID:</label>
+        <input type="text" id="idDisquera" th:field="*{idDisquera}"/>
+        <br/>
+        <label for="nitDisquera">NIT:</label>
+        <input type="text" id="nitDisquera" th:field="*{nitDisquera}"/>
+        <br/>
+        <label for="nombreDisquera">Nombre:</label>
+        <input type="text" id="nombreDisquera" th:field="*{nombreDisquera}"/>
+        <br/>
+        <label for="telefonoDisquera">Teléfono:</label>
+        <input type="text" id="telefonoDisquera" th:field="*{telefonoDisquera}"/>
+        <br/>
+        <label for="direccionDisquera">Dirección:</label>
+        <input type="text" id="direccionDisquera" th:field="*{direccionDisquera}"/>
+        <br/>
+        <label for="estadoDisquera">Estado:</label>
+        <input type="checkbox" id="estadoDisquera" th:field="*{estadoDisquera}"/>
+        <br/>
+        <button type="submit">Guardar</button>
+    </form>
+    <!-- Agrega aquí cualquier otro contenido que desees -->
+</body>
+</html>

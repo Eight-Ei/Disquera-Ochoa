@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ver Género</title>
+    <!-- Agrega aquí los enlaces a tus archivos CSS -->
+</head>
+<body>
+    <h1>Detalles del Género</h1>
+    <p>ID: <span th:text="${genero.idGenero}">1</span></p>
+    <p>Nombre: <span th:text="${genero.nombreGenero}">Rock</span></p>
+    <p>Estado: <span th:text="${genero.estadoGenero ? 'Activo' : 'Inactivo'}">Activo</span></p>
+    <!-- Agrega aquí cualquier otro contenido que desees -->
+</body>
+</html>

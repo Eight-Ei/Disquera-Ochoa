@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listar Disqueras</title>
+    <!-- Agrega aquí los enlaces a tus archivos CSS -->
+</head>
+<body>
+    <h1>Listar Disqueras</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NIT</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="disquera : ${disqueras}">
+                <td th:text="${disquera.idDisquera}">1</td>
+                <td th:text="${disquera.nitDisquera}">123456789</td>
+                <td th:text="${disquera.nombreDisquera}">Disquera A</td>
+                <td th:text="${disquera.telefonoDisquera}">1234567890</td>
+                <td th:text="${disquera.direccionDisquera}">Dirección A</td>
+                <td th:text="${disquera.estadoDisquera ? 'Activo' : 'Inactivo'}">Activo</td>
+                <td>
+                    <a th:href="@{/disquera/ver/{id}(id=${disquera.idDisquera})}">Ver</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Agrega aquí cualquier otro contenido que desees -->
+</body>
+</html>
